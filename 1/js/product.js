@@ -1,14 +1,16 @@
+
+
+
 const productsBtn = document.querySelectorAll('.product__btn');
 const cartProductsList = document.querySelector('.cart-content__list');
 const cart = document.querySelector('.cart');
 const cartNumb = document.querySelector('.nav__cart-number');
 const fullPrice = document.querySelector('.fullprice');
-import database from './database.js';
-import data from './database.js';
+
 
 let price = 0;
 
- 
+
 const randID = () => {
     return Math.random().toString(36).substring(2,15) + Math.random().toString(36).substring(2,15);
 };
@@ -33,25 +35,11 @@ const printNum = () => {
     length > 0 ? cart.classList.add('#') : cart.classList.add('#');
 };
 
-const generateCartProduct = (img, title, price, id) => {
-    return `
-    <article class="product${id}">
-                <img src="${img}" alt="${id}" class="product__img"  style="border-radius: 25%">
-                <h4 class="product__title">${title}</h4>
-                <div class="product__count">
-
-
-                </div>
-                <div class="product__price">
-                    <span class="product__price">
-                       ${price} Ξ
-                    </span>
-                </div>
-                <button class="product__btn" onclick="(e) => {let event = new Event('add_to_cart', {bubbles: true});e.target.dispatchEvent(event)}">Add to cart</button>
-            
-            </article>
-    `;
+function sendEventAddToCart (e) {
+    let event = new Event('add_to_cart', {bubbles: true});
+    e.target.dispatchEvent(event)
 }
+
 
 productsBtn.forEach(el => {
     el.addEventListener('click', (e) => {
@@ -77,32 +65,26 @@ productsBtn.forEach(el => {
     });
 });
 
-
-const promise1 = new Promise(promiseBody);
-
- function promiseBody(resolve, reject) {
-     setTimeout(() => {
-         resolve(data);
-     }, 1000);
- }
-
  
-  promise1.then((result) => {
-    const mapres = result.map((x) => generateCartProduct(x.url, x.title, x.price, x.id));
-    let productHtmls = []
-    for(let i = 0; i < result.length; i++) {
-        const elem = result[i]
-        const html = generateCartProduct(elem.url, elem.title, elem.price, elem.id);
+//   promise1.then((result) => {
+//     const mapres = result.map((x) => generateCartProduct(x.url, x.title, x.price, x.id));
+//     let productHtmls = []
+//     for(let i = 0; i < result.length; i++) {
+//         const elem = result[i]
+//         const html = generateCartProduct(elem.url, elem.title, elem.price, elem.id);
 
-        productHtmls.push(html)
+//         productHtmls.push(html)
 
-    }
-    const docwr =  document.getElementById('wrapper');
+//     }
+//     const docwr =  document.getElementById('wrapper');
     
-    for (let x of mapres){
-        docwr.insertAdjacentHTML('beforeend', x);
-    }
-  });
+//     for (let x of mapres){
+//         docwr.insertAdjacentHTML('beforeend', x);
+//     }
+//     result.map(x => {
+//         document.getElementById(IdProvider.getAddToCartButtonId(x.id)).onclick = (e) => sendEventAddToCart(e)
+//     })
+//   });
 
 
   const wrapper1 =  document.getElementById('wrapper');
@@ -110,3 +92,6 @@ const promise1 = new Promise(promiseBody);
     console.log("catched",e);
   }
   wrapper1.addEventListener("add_to_cart", func)
+
+
+export {sendEventAddToCart}
