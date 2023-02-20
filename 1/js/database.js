@@ -1,4 +1,4 @@
-export let data = [
+export default [
     {
         id : 1,
         title: "SPACE EYE",

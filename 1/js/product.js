@@ -3,7 +3,7 @@ const cartProductsList = document.querySelector('.cart-content__list');
 const cart = document.querySelector('.cart');
 const cartNumb = document.querySelector('.nav__cart-number');
 const fullPrice = document.querySelector('.fullprice');
-import data from './database.js/' assert { type: 'js' };
+import data from './database.js';
 
 let price = 0;
 
