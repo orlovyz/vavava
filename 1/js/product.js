@@ -3,6 +3,7 @@ const cartProductsList = document.querySelector('.cart-content__list');
 const cart = document.querySelector('.cart');
 const cartNumb = document.querySelector('.nav__cart-number');
 const fullPrice = document.querySelector('.fullprice');
+import database from './database.js';
 import data from './database.js';
 
 let price = 0;
@@ -46,7 +47,7 @@ const generateCartProduct = (img, title, price, id) => {
                        ${price} Ξ
                     </span>
                 </div>
-                <button class="product__btn">Add to cart</button>
+                <button class="product__btn" onclick="(e) => {let event = new Event('add_to_cart', {bubbles: true});e.target.dispatchEvent(event)}">Add to cart</button>
             
             </article>
     `;
@@ -103,4 +104,9 @@ const promise1 = new Promise(promiseBody);
     }
   });
 
-  
+
+  const wrapper1 =  document.getElementById('wrapper');
+  function func  (e) {
+    console.log("catched",e);
+  }
+  wrapper1.addEventListener("add_to_cart", func)
