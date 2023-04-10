@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>240.shop</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="./js/runner.js" type="module"></script>
+    <script src="./js/scroll.js"></script>
+</head>
+<body>
+    
+<nav class ="nav">
+    <div class="container">
+        <div class="nav__row">
+            <a href="#" class="nav__logo">
+                <img src="./img/header/logo.svg" alt="Logo" wight="120" height="100">
+            </a>
+
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a onclick="setScrollToOptions(0)" href="#" class="nav__link">
+                      Main  
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a onclick="setScrollToOptions(800)" href="#" class="nav__link">
+                        Collection
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a onclick="setScrollToOptions(1500)" href="#"  class="nav__link">
+                        Contacts
+                    </a>
+                </li>
+        
+            </ul>
+
+            <div class="nav__cart cart" id="allcart" tabindex="0">
+                <div class="nav__cart-link" id="cartopenbtn">
+                    <img src="./img/icons/cart.svg" alt="Cart" width="45" height="45">
+                    <span class="nav__cart-number">0</span>
+                </div>
+
+
+                <div class="modal__background__cart-content" id="modal">
+                    <div class="cart__content" id="cartcontent">
+                        <div class="crossclose" id="modalclose">
+                             
+                        </div>
+                        <div class="cart-content__list-scroll">
+                            <ul class="cart-content__list" id='cart-wrapper'>
+                                <li class="cart-content__item">
+            
+                                    <div class="cart-content__product" id='cart-product'>
+                                        
+                                    </div>
+                                        
+                                    
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cart-content__bottom">
+                            <div class="cart-content__fullprice">
+                                <span>Total:</span>
+                                <div class="fullprice" id='fullprice-total' >
+                                
+                                </div>
+                            </div>
+                            <button class="cart-content__btn">
+                                Go to cart!
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+<header class="header">
+    <div class="container">
+        <div class="header__row">
+            <div class="header__content">
+                <h1 class="header_title">
+                    NFT is a step into the future in the art world.
+                </h1>
+                <div class="header__text">
+                    <p>
+                        Right here u can buy some NFT-pictures. Let’s go!
+                    </p>
+                </div>
+            <div class="header_btn">
+                <a onclick="setScrollToOptions(800)" class="button" href="#">
+                    Buy now!
+                </a>
+            </div>
+            </div>
+            <div class="header__gif">
+                <img src="./img/giphy.gif" alt="Header photo" width="400" height="400" style="border-radius: 25%;"> 
+             </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-header__title">
+                    New NFT collections!
+                </h2>
+                <div class="section-header_description">
+                    <p>
+                        NFT updating every 24 hrs!
+                    </p>
+                </div>
+            </div>
+            <div class="product-wrapper" id="wrapper">
+            
+            </div>
+        </div>
+    </section>
+</main>
+<header class="contacts">
+    <div class="container">
+        <div class="contacts__title">
+            <div class="logo3">Contacts</div>
+			<div class="conttxt">Here you can find ways to contact me</div>
+            <div class="icon">
+                <div class="cnt1">
+                    <p><a href="https://github.com/orlovyz" target="_blank"><img src="./img/icons/git.svg" alt="git" width="75px"></a></p>
+                </div>
+                <div class="cnt2">
+                    <p><a href="https://t.me/orlovyz" target="_blank"><img src="./img/icons/tg.svg" alt="tg" width="75px"></a></p>
+                </div>
+                <div class="cnt3">
+                    <p><a href="mailto:robots2187@gmail.com" target="_blank"><img src="./img/icons/gmail.svg" alt="email" width="75px"></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+</body>
+</html>

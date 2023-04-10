@@ -1,0 +1,255 @@
+*,*::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+    width: 1228px;
+    margin: 0 auto;
+}
+/*nav*/
+
+.nav { 
+    padding: 40px 0;
+    background-color: #505050;
+}
+
+
+
+.nav__row {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav__logo {
+    width: 120px;
+    height: 100px;
+}
+
+.nav__list, a.nav__list {
+    margin: 0;
+    margin-right: 700px;
+    padding: 0;
+    list-style-type: none;
+    width: 180px;
+    height: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+     display: flex;
+
+}
+
+
+
+.nav__item {
+    margin-right: 40px;
+    margin-top: 5px;
+}
+
+.nav__item:nth-last-child(){
+    margin-right: 0;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+a.nav__link:hover{
+    color: #EB5050;
+}
+
+.nav__cart {
+    width: 40px;
+    height: 40px;
+   margin-top: -20px;
+}
+
+.nav__cart-link{
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+}
+
+.nav__cart-number {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #EB5050;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+}
+/*header*/
+.header {
+    background-color: #505050;
+    padding-bottom: 150px;
+}
+
+.header__row {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}   
+
+.header__content {
+    position: absolute;
+    left:0;
+    top: 25%;
+    width: 450px;
+    height: 125px;
+}
+
+.header__gif {
+    height: auto;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.header_title {
+    color:#FFFFFF;
+}
+
+.header__text {
+    color: #FFFFFF;
+}
+.header_btn {
+    
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 32px 14px;
+    background-color: #FFFFFF;
+    
+    border-radius: 4px;
+
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 26px;
+    line-height: 1;
+    text-align: center;
+    text-decoration: none;
+    color:black;
+}
+
+.button:hover{
+        transform: scale(1.05);
+        transition: transform 0.5s;
+}
+/*main*/
+
+.featured {
+    background-color: #484848;
+    padding-top: 50px;
+    padding-bottom: 110px;
+}
+
+.container {
+    
+}
+
+.section-header {
+
+    
+}
+
+.section-header__title {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #484848;
+    
+    color: #FFFFFF;
+
+}
+
+.section-header_description {
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #484848;
+
+color: #FFFFFF;
+
+}
+/*prod*/
+.product {
+    text-align: center;
+    max-width: 250px;
+    
+    padding:0;
+    display: inline-block;
+    margin-left: 45px;
+}
+.product__img {
+    display: block;
+    margin-bottom: 12px;
+
+}
+.product__title {
+    margin: 0;
+    margin-bottom: 6px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    text-align: center;
+    background-color: #484848;
+    text-transform: uppercase;
+color: #FFFFFF;
+    position: relative;
+    justify-content: space-evenly; /*<---*/
+    display: inline-block;
+}
+.product__price {
+    margin: auto;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    text-align: center;
+    background-color: #484848;
+    text-transform: uppercase;
+    line-height: 19px;
+    color: #FFFFFF;  
+    margin-bottom: 10px;  
+    margin-left: 100px;
+}
+
+.product__btn {
+    border: none;
+    width: auto;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Quicksand';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 27px;
+    text-align: center;
+    color: black;
+    margin-bottom: 30px;
+}
