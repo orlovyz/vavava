@@ -6,7 +6,7 @@ body{
     margin: 0;
     font-family: 'Quicksand', sans-serif;
     background-color: #505050;
-    overflow: auto;
+    overflow-y: visible;
 }
 
 body.modal-open{
@@ -600,3 +600,30 @@ color: #FFFFFF;
 .minus {
     color: #FFFFFF;
 }
+
+@media (max-width: 900px) {
+    .body{
+        width: auto;
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
+    .nav__list{
+        margin-right: 0;
+        
+    }
+    
+    .gifybackground {
+        background: url("./../img/giphy.gif");
+        min-height: 50vh;
+        
+    }
+ .header__gif{
+    display: none;
+ }
+    }
+    .container{
+        width: auto;
+    }
+    @media (max-width: 650px) {
+        
+    }
