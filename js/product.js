@@ -18,7 +18,7 @@ const getDelFromCartButtonId = (id) => `del_${id}`
 
 const generateCart = (url, title, price, id, amount) => {
     return `
-    <article class="product_cart_${id}">
+    <article class="product_cart_${id} prodincart">
         <img src="${url}" alt="${id}" class="product_cart_img"  style="border-radius: 25%">
         <h4 class="product_cart_title">${title}</h4>
         <div class="product_cart_price">

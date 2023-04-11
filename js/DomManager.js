@@ -10,7 +10,7 @@ const appendProductCart = (productId, productHtml) => {
 
 const generateProduct = (img, title, price, id) => {
     return `
-    <article class="product${id}">
+    <article class="product${id} prodd">
         <img src="${img}" alt="${id}" class="product__img"  style="border-radius: 25%">
         <h4 class="product__title">${title}</h4>
         <div class="product__price">

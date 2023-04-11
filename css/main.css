@@ -124,6 +124,7 @@ a.nav__link:hover{
     float: right;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: auto;
 }
 .cart__content{
     margin: 0;
@@ -132,6 +133,8 @@ a.nav__link:hover{
     position: absolute;
     z-index: 1;
     height: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart-content:hover{
@@ -143,11 +146,15 @@ a.nav__link:hover{
 .cart-content__list{
     list-style: none;
     display: inline-block;
+    width: 100%;
+    padding-right: 40px;
+    overflow: auto;
+    height: 100%;
 }
 .cart-content__list-scroll{
-    max-height: 330px;
+    height:100%;
     scroll-behavior: auto;
-    
+    max-height: 475px;
 }
 .cart-product{
 display: flex;
@@ -174,6 +181,7 @@ background-color: black;
     height: 35px;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-left: auto;
 }
 .cart-product__img{
     max-width: 100px;
@@ -204,8 +212,6 @@ background-color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
@@ -337,18 +343,20 @@ color: #FFFFFF;
 .product-wrapper{
     display: flex;
     flex-wrap: wrap;
-    margin-left: 45px;
+    justify-content: center;
+}
+.prodd{
+    align-items: center;
+    margin-right: 0px;
 }
 .product1 {
     text-align: center;
     max-width: 250px;
     margin: 0;
-    
+    align-items: center;
     flex-wrap: wrap;
     display: flex;
-    justify-content:baseline;
     flex-direction: column;
-    margin-right: 25px;
 
 }
 .product__img {
@@ -387,6 +395,7 @@ color: #FFFFFF;
 }
 
 .product__btn {
+    padding-inline: 1em;
     border: none;
     width: auto;
     background-color: #FFFFFF;
@@ -400,7 +409,6 @@ color: #FFFFFF;
     color: black;
     margin-bottom: 20px;
     max-width: 100px;
-    margin-left: 75px;
 }
 .product__btn:hover{
     transform: scale(1.05);
@@ -580,6 +588,7 @@ color: #FFFFFF;
 }
 .product_cart_title {
     color: #FFFFFF;
+    margin-inline: auto;
 }
 .product_cart_price {
     color: #FFFFFF;
@@ -608,13 +617,43 @@ color: #FFFFFF;
         min-height: 50vh;
         display: flex;
         align-items: center;
-
+        padding-bottom: 0;
     }
  .header__gif{
     display: none;
  }
     }
     
-    @media (max-width: 650px) {
-        
+    @media (max-width: 700px) {
+        .cart__content{
+            width: 500px;
+            height: 500px;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .nav__list{
+            display: inline-block;
+            margin-top: -100px;
+            margin-right: auto;
+        }
+        .cart-content__list-scroll{
+            height:100%;
+            scroll-behavior: auto;
+            max-height: 350px;
+        }
+    }
+    @media (max-width: 480px) {
+        .cart__content{
+            
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .nav__logo{
+            display: none;
+        }
+    }
+    .prodincart{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
     }
